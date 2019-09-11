@@ -20,7 +20,7 @@ router.route('/:name').get((req, res) => {
             .then (matchlist=> {
                 var matchPromises = [];
                 //FOR BREVITY - determines how many matches to search
-                matchlist.matches.slice(0,1).map( x => {
+                matchlist.matches.slice(0,5).map( x => {
                    
                     var matchPromise = new Promise(function(resolve, reject) {
                         kayn.Match.get(x['gameId']).then(game => {
