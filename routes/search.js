@@ -11,7 +11,6 @@ var champs = require('./../champion.json');
 router.route('/:name').get((req, res) => {
     
     var matchesReturns = [];
-    console.log('___________________________________________________________________________')
  
     kayn.Summoner.by.name(req.params.name)
     .then(summoner => {
