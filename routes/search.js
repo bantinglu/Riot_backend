@@ -11,7 +11,7 @@ var champs = require('./../champion.json');
 router.route('/:name').get((req, res) => {
     
     var matchesReturns = [];
- 
+
     kayn.Summoner.by.name(req.params.name)
     .then(summoner => {
         kayn.Matchlist.by.accountID(summoner['accountId'])
@@ -24,7 +24,7 @@ router.route('/:name').get((req, res) => {
                     var matchPromise = new Promise(function(resolve, reject) {
                         kayn.Match.get(x['gameId']).then(game => {
                             resolve(game);
-                        });
+                        }).catch(err => reject(err))
                     });
                     matchPromises.push(matchPromise);
                 });
