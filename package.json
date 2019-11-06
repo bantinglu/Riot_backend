@@ -14,7 +14,7 @@
     "express": "^4.17.1",
     "json-query": "^2.2.2",
     "kayn": "^0.9.11",
-    "mongoose": "^5.7.1",
+    "mongoose": "^5.7.5",
     "nodemon": "^1.19.2"
   }
 }
